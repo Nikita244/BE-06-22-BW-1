@@ -1,0 +1,22 @@
+<configuration>
+
+	<!-- configura l'appender e forniscigli un ID -->
+	<appender name="STDOUT"
+		  class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+			%n %d{HH:mm:ss} %-5level %logger{86} - Messaggio: %msg{50} (thread: %t) %n%n
+			</pattern>
+		</encoder>
+	</appender>
+	<logger name="org.jboss" level="off" />
+    <logger name="org.hibernate" level="off" />
+
+	<!-- imposta l'appender e il livello di default -->
+	<root level="debug">
+		<appender-ref ref="STDOUT" />
+	</root>
+	
+</configuration>
+
+
